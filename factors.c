@@ -6,11 +6,11 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
-
 /**
  * read_textfile- read and sent to stdout a number of charss.
- * @filename: name of file
- * @letters: number of letters
+ *
+ *@filename: name of file
+ *@letters: number of letters
  * Return: Number of printed chars.
  */
 int main(int ac, char **av)
@@ -28,22 +28,21 @@ int main(int ac, char **av)
 	buf = malloc(1000 * sizeof(char));
 	buf2 = malloc(120 * sizeof(char));
 	leido = read(fd, buf, letters);
-	i = 0;
+ 	i = 0;
 	while (buf[i] != 0)
 	{
 		j = 0;
 		for (h = 0; h <= 100; h++)
 			buf2[h] = 0;
 		while (buf[i] != 10)
-		{
-			buf2[j] = buf[i];
-			 i++;
-			  j++;
-		}
+			 {
+				 buf2[j] = buf[i];
+				 i++;
+				 j++;
+			 }
 		number = atol(buf2);
 		flag = 0;
-
-		for (k = 2; k < number / 2 && flag == 0; k++)
+		for (k = 2; k < number /2 && flag == 0; k++)
 		{
 			if (number % k == 0)
 				flag = 1;
@@ -55,5 +54,5 @@ int main(int ac, char **av)
 	free(buf);
 	free(buf2);
 	close(fd);
-	return (0);
+	return(0);
 }
