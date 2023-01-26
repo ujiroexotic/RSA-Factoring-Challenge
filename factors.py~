@@ -18,4 +18,3 @@ with open("tests", 'r', encoding='utf-8') as f:
                     flag = 1
                     b = n1 / a
                     print ("{:} = {:} * {:}".format(n1, a, b, end=""))
-
